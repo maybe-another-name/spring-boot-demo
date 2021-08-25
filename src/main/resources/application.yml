@@ -1,0 +1,7 @@
+server:
+  port: 8443
+  ssl:
+    keyStore: ${CINEMA_CERTS_PATH}/client/keystore.p12
+    keyStorePassword: ${CINEMA_KEYSTORE_CLIENT_PASSWORD}
+    trustStore: ${CINEMA_CERTS_PATH}/trust/truststore.p12
+    trustStorePassword: ${CINEMA_TRUSTSTORE_PASSWORD}
