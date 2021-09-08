@@ -1,6 +1,23 @@
+# Overview
+
+Demonstrates two web end-points, with one calling the other
+
+# Key setup
+
+Best resources I have seen (there are many poor ones): https://lightbend.github.io/ssl-config/CertificateGeneration.html#generating-x-509-certificates
+
+Short & sweet snippet is found in `demo-b/src/main/resources/create_signed.sh`
+
 # Environment variables for security
 
-> export CINEMA_CERTS_PATH=~/cinema/certs
-> export CINEMA_KEYSTORE_CLIENT_PASSWORD=changeit
-> export CINEMA_TRUSTSTORE_PASSWORD=changeit
-> export CINEMA_KEYSTORE_PASSWORD=changeit
+Point this to where-ever you created your certs
+
+> export CERTS_PATH=...
+
+# Running it
+
+mvn spring-boot:run --projects demo-a
+
+mvn spring-boot:run --projects demo-b
+
+You should see that demo-b was able to fetch the resource offered up by demo-a.
