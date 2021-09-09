@@ -8,6 +8,8 @@ Best resources I have seen (there are many poor ones): https://lightbend.github.
 
 Short & sweet snippet is found in `demo-b/src/main/resources/create_signed.sh`
 
+This will create a bunch of files. The key ones are `localhost.jks`, `localhost-trust.jks`, and `client.jks`.
+
 # Environment variables for security
 
 Point this to where-ever you created your certs
