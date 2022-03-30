@@ -23,7 +23,9 @@ Here is a problematic example demonstrating the inconsistency:
 
 >management.endpoints.web.base-path=/
 >management.endpoints.web.path-mapping.prometheus=metrics
+
 are replaced by:
+
 >export MANAGEMENT_ENDPOINTS_WEB_BASE_PATH=/
 >export MANAGEMENT_ENDPOINTS_WEB_PATHMAPPING_PROMETHEUS=metrics
 
