@@ -16,6 +16,20 @@ Point this to where-ever you created your certs
 
 > export CERTS_PATH=...
 
+# Other environment variables
+Usually, spring makes everything uppercase, and replaces special characters with underscores.  However, this isn't consistent.
+
+Here is a problematic example demonstrating the inconsistency:
+
+>management.endpoints.web.base-path=/
+>management.endpoints.web.path-mapping.prometheus=metrics
+are replaced by:
+>export MANAGEMENT_ENDPOINTS_WEB_BASE_PATH=/
+>export MANAGEMENT_ENDPOINTS_WEB_PATHMAPPING_PROMETHEUS=metrics
+
+Notice the dash is in one instance replaced by an underscore, and in the other, is just removed.
+(Based on spring actuator starter 2.4.10)
+
 # Running it
 
 mvn spring-boot:run --projects demo-a
